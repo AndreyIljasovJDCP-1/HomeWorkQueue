@@ -1,4 +1,4 @@
-public class Person {
+public class Person implements Comparable<Person> {
 
     private final String fio;
 
@@ -29,5 +29,15 @@ public class Person {
     @Override
     public String toString() {
         return fio + ", в кармане билетов: " + tickets;
+    }
+
+    @Override
+    public int compareTo(Person other) {
+        int delta = this.tickets - other.tickets;
+
+        if (delta != 0) {
+            return delta; // знак + сортировка по возрастанию, — по убыванию
+        }
+        return this.fio.compareTo(other.fio);
     }
 }

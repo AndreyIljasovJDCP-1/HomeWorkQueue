@@ -1,11 +1,12 @@
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class Main {
 
     public static void main(String[] args) {
-        Queue<Person> queue = new LinkedList<>(generateClients());
+        Queue<Person> queue = new PriorityQueue<>(generateClients());
 
         System.out.println("\nПарк аттракционов в Цветочном городе.\n");
 
@@ -33,7 +34,7 @@ public class Main {
         clientList.add(new Person("Пончик", 2));
         clientList.add(new Person("Сиропчик", 2));
         clientList.add(new Person("д-р Пилюлькин", 1));
-        clientList.add(new Person("Пачкуля Пестренький", 0));
+        clientList.add(new Person("Пачкуля Пёстренький", 0));
         clientList.add(new Person("Винтик", 1));
         clientList.add(new Person("Шпунтик", 1));
         return clientList;
