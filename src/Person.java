@@ -33,6 +33,11 @@ public class Person implements Comparable<Person> {
 
     @Override
     public int compareTo(Person other) {
+
+        if (other == null) {
+            return -1; // this < other
+        }
+        
         int delta = this.tickets - other.tickets;
 
         if (delta != 0) {
